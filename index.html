@@ -120,13 +120,7 @@
 	<script>
 	 var buildUrl = "Build";
 		 
-	var cdnParam = new URLSearchParams(window.location.search).get("cdn");
-                            if (!cdnParam && window.location.hostname.includes(".")) {
-                            var parts = window.location.hostname.split(".");
-                            if (parts.length > 2) {
-                                cdnParam = "2";
-                            }
-                        }
+	
                         var baseUrl = cdnParam === "2" ? "https://ubg42.github.io/GDASH3D/" : "";
 						buildUrl = baseUrl + buildUrl;
 		var loaderUrl = buildUrl + "/geometry-dash-3d.loader.js";
